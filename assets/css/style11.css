@@ -1,0 +1,95 @@
+:root {
+    --white: #ffffff;
+    --Black: #000000;
+    --Very-light-pink: #C7C7C7;
+    --Text-input-field: #F7F7F7;
+    --Hospital-green: #ACD9B2;
+    --sm: .88rem;
+    --md: 1rem;
+    --lg: 1.13rem;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+.menu {
+    display: none;
+}
+.logo {
+    width: 6.25rem;
+
+}
+
+.navbar-left ul, .navbar-right ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    height: 3.75rem;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    border-bottom: 1px solid var(--Very-light-pink);
+    
+}
+.navbar-left{
+    display: flex;
+ }
+
+.navbar-left ul{
+   margin-left: 12px;
+}
+
+.navbar-left ul li a,
+.navbar-right ul li a{
+    text-decoration: none;
+    color: var(--Very-light-pink);
+    border: 1px solid var(--white);
+    padding: .5rem;
+    border-radius: 8px;
+ }
+
+.navbar-left ul li a:hover,
+.navbar-right ul li a:hover{
+    border: 1px solid var(--Hospital-green);
+    color: var(--Hospital-green);
+ }
+
+.navbar-email {
+    color: var(--Very-light-pink);
+    font-size: var(--sm);
+    margin-right: 12px;
+}
+.navbar-shopping-card {
+    position: relative;
+}
+.navbar-shopping-card div{
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--Hospital-green);
+    border-radius: 50%;
+    font-size: var(--sm);
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    right: -3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@media (max-width: 640px){
+    .menu {
+        display: block;
+    }
+    .navbar-left ul {
+        display: none;
+    }
+    .navbar-email {
+        display: none;
+    }
+}

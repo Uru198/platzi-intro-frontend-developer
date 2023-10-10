@@ -1,0 +1,85 @@
+:root {
+    --white: #ffffff;
+    --Black: #000000;
+    --Very-light-pink: #C7C7C7;
+    --Text-input-field: #F7F7F7;
+    --Hospital-green: #ACD9B2;
+    --sm: .88rem;
+    --md: 1rem;
+    --lg: 1.13rem;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+.card-container {
+    /* lo que vamos hacer es hacer separacion de columnas y lo podemos hacer con display: grid luego colocamos grid-template-columns: repeat() lo que va dentro de los parentesis es lo sigueinte el primer parametro es la cantidad de columnas 2 y el segundo es el tamaño de cada columna 1fr*/
+    /* muchas veces no sabemos la cantidad de columnas que necesitemos referente al tamaño de la pantalla asi que en vez de definir la cantidad de columnas le colocamos auto-fill que significa que se llenara automaticamente  dependiendo de la pantalla y el siguiente parametro es el tamaño de nuestras card 250px por ejemplo */
+    display: grid;
+    /* grid-template-columns: repeat(2, 1fr); */
+    grid-template-columns: repeat(auto-fill, 15rem);
+    /* gap lo utilizamos para darle espacios entre las card */
+    gap: 1.625rem;
+    place-content: center;
+}
+
+.product-card {
+    width: 15rem;
+}
+
+.product-card img{
+    width: 15rem;
+    height: 15rem;
+    border-radius: 20px;
+    /* cuando traemos una imagen algunas veces las dimensiones van cambiar para mejorar la calidad de la imagen referente a las dimensiones utilizamos object-fit: cover esto lo que hace es que independiente de lo ancho o alto que lo ajustemos el quedara con su tamaño real */
+    object-fit: cover;
+}
+
+.product-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .75rem;
+}
+.product-info figure img {
+    width: 2.1875rem;
+    height: 2.1875rem;
+}
+
+.product-info figure {
+    /* la etiqueta figure biene ppr defecto con una margen y en este caso se lo quitaremos  */
+    margin: 0;
+}
+.product-info div p:nth-child(1) {
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+.product-info div p:nth-child(2) {
+    font-size: var(--sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--Very-light-pink);
+}
+/* en este caso el ejercicio nos presenta que al hacerlo mas pequeño tipo movile nos queda un espacio en blanco asi que se arreglara con un media query para hacerlo responsive */
+
+@media (max-width: 40rem){
+    .card-container {
+        grid-template-columns: repeat(auto-fill, 8.75rem);
+        /* gap lo utilizamos para darle espacios entre las card */
+        gap: 1.625rem;
+    }
+    .product-card {
+        width: 8.75rem;
+    }
+    
+    .product-card img{
+        width: 8.75rem;
+        height: 8.75rem;
+        border-radius: 20px;
+        /* cuando traemos una imagen algunas veces las dimensiones van cambiar para mejorar la calidad de la imagen referente a las dimensiones utilizamos object-fit: cover esto lo que hace es que independiente de lo ancho o alto que lo ajustemos el quedara con su tamaño real */
+        object-fit: cover;
+    }
+}

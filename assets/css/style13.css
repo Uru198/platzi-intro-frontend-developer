@@ -1,0 +1,103 @@
+:root {
+    --white: #ffffff;
+    --Black: #000000;
+    --Very-light-pink: #C7C7C7;
+    --Text-input-field: #F7F7F7;
+    --Hospital-green: #ACD9B2;
+    --sm: .88rem;
+    --md: 1rem;
+    --lg: 1.13rem;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+.primary-button {
+    background-color: var(--Hospital-green);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 3.125rem;
+}
+
+
+.product-detail {
+    width: 22.5rem;
+    padding: 1.5rem; 
+    /* El box-sizing: border-box; esto hace que todos los elementos se centren colocandole un pading exterior grueso */
+    box-sizing: border-box;
+    position: absolute;
+    right: 0;
+}
+.title-container {
+    display: flex;
+}
+.title-container img{
+    display: flex;
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+.title {
+    font-size: var(--lg);
+    font-weight: bold;
+}
+.order {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    align-items: center;
+    background-color: var(--Text-input-field);
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+    padding: 0 1.5rem;
+}
+
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.order p:nth-child(2){
+   text-align: end;
+   font-weight: bold;
+
+}
+.order p span:nth-child(1){
+    font-size: var(--md);
+    font-weight: bold;
+}
+
+.shopping-cart figure img{
+    width: 4.375rem;
+    height: 4.375rem;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.shopping-cart p:nth-child(2){
+   color: var(--Very-light-pink);
+}
+.shopping-cart p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+ }
+
+ .shopping-cart {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    align-items: center;
+}
+.shopping-cart figure{
+   margin: 0;
+}
+
+@media (max-width: 640px){
+    .product-detail {
+        width: 100%;  
+    }
+}

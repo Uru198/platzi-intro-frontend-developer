@@ -1,0 +1,113 @@
+:root {
+    --white: #ffffff;
+    --Black: #000000;
+    --Very-light-pink: #C7C7C7;
+    --Text-input-field: #F7F7F7;
+    --Hospital-green: #ACD9B2;
+    --sm: .88rem;
+    --md: 1rem;
+    --lg: 1.13rem;
+}
+body {
+    font-family: 'Ubuntu', sans-serif;
+    margin: 0;
+}
+
+.login {
+    width: 100%;
+    height: 100vh;
+    /*  Esto seria igual que colocar 
+    display: flex;
+    justify content: center;
+    align items: center;
+    */
+    display: grid;
+    place-items: center;
+}
+
+.form-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    width: 18.75rem;
+    justify-items: center;
+}
+
+.logo {
+    width: 9.4rem;
+    margin-bottom: 3rem;
+    /* con justify-self podemos alinear un texto, logo o div sin necesidad de tener otros elementos  */
+    justify-self: center;
+    display: none;
+}
+
+.title {
+    font-size: var(--lg);
+    margin-bottom: .75rem;
+    text-align: center;
+}
+
+.subtitle {
+    color: var(--Very-light-pink);
+    font-size: var(--md);
+    /* el font-weight es el grosor de nuestra letra */
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.email-image {
+    width: 8.25rem;
+    height: 8.25rem;
+    border-radius: 50%;
+    background-color: var(--Text-input-field);
+    display: grid;
+    place-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.email-image img {
+    width: 5rem;
+}
+.resend {
+    font-size: var(--sm);
+}
+
+.resend span {
+    color: var(--Very-light-pink);
+}
+.resend a {
+    color: var(--Hospital-green);
+    text-decoration: none;
+}
+
+
+.primary-button {
+    background-color: var(--Hospital-green);
+    border-radius: 0.5rem;
+    border: none;
+    color: var(--white);
+    width: 100%;
+    cursor: pointer;
+    font-size: var(--md);
+    font-weight: bold;
+    height: 3.125rem;
+}
+
+
+.login-button {
+    margin-top: 0.875rem;
+    margin-bottom: 1.875rem;
+}
+
+/* esta medida responsive esta hecha para medidas grandes apartir de una medidas pequeña si se amplia se hara el cambio correspondiente */
+@media (max-width: 40rem) {
+    .logo {
+        /* colocamos display: block para que se pueda visualizar nuevamente nuestro logo */
+        display: block;
+    }
+}
+
+
+
+
